@@ -1,0 +1,15 @@
+[
+
+    {"id": 1,  "nombre": "Playas de Panamá", "cantidad": 1, "desc": "*incluye hospedaje para 2 personas.", "precio": 650000, "img": "./img/paquetes/paquete1.jpg"},
+    {"id": 2,  "nombre": "Egipto", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 220000, "img": "./img/paquetes/paquete2.jpg"},
+    {"id": 3,  "nombre": "Patagonia y centro porteño", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 450000, "img": "./img/paquetes/paquete3.jpg"},
+    {"id": 4,  "nombre": "Leyendas de Europa Tour", "cantidad": 1, "desc": "*incluye hospedaje para 2 personas.", "precio": 1250000, "img": "./img/paquetes/paquete4.jpg"},
+    {"id": 5,  "nombre": "Grandes Capitales Chinas", "cantidad": 1, "desc": "*incluye hospedaje para 2 personas.", "precio": 1500000, "img": "./img/paquetes/paquete5.jpg"},
+    {"id": 6,  "nombre": "El gran Egipto", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 450000,  "img": "./img/paquetes/paquete6.jpg"},
+    {"id": 7,  "nombre": "Vietnam, historia y belleza", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 650000,  "img": "./img/paquetes/paquete7.jpg"},
+    {"id": 8,  "nombre": "Beyahibe", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 240000,  "img": "./img/paquetes/paquete8.jpg"},
+    {"id": 9,  "nombre": "Cartagena", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 220000,  "img": "./img/paquetes/paquete9.jpg"},
+    {"id": 10, "nombre": "Cadena Dorado", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 310000,  "img": "./img/paquetes/paquete10.jpg"},
+    {"id": 11, "nombre": "San Andres", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 150000, "img": "./img/paquetes/paquete11.jpg"},
+    {"id": 12, "nombre": "Punta Cana", "cantidad": 1, "desc": "*incluye hospedaje 2 personas.", "precio": 239000, "img": "./img/paquetes/paquete12.jpg"}
+]

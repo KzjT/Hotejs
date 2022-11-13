@@ -1,125 +1,406 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoteJS</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/5e96413f29.js" crossorigin="anonymous"></script>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description"
+      content="En AG Renta disponemos de camionetas para que viajes con los tuyos en completa seguridad y confort. Damos servicio a toda la república.">
+   <meta name="keywords" content="renta de camioneta, vacaciones, viajes económicos, ag renta">
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+   <!-- Fuente -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+   <!-- Animaciones  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <!-- style CSS -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/estilos.css">
+   <!--  Iconos  -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+   <title>Hoteljs</title>
 </head>
 
 <body>
-    <header class="encabezado">
-        <h1 class="tituloPrincipal">HotelJS</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Ubicación</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-        <a class="botonAsociar" href="#">Reserva ya!</a>
-    </header>
+   <!--  ENCABEZADO  -->
+   <!--  NAV -->
+   <header class="main_menu home_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+         <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" class="logo"></a>
 
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <div class="imagenFondo">
-        <main>
-            <div id="container-general">
-                <section id="section-paquetes"></section>
-                <section id="section-carrito"></section>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mx-auto">
+                  <li class="nav-item animate__animated animate__pulse">
+                     <a class="nav-link active text-light" aria-current="page" href="index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="empresa.html">EMPRESA</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="paquetes.html">PAQUETES</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="clientes.html">CLIENTES</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" aria-current="page" href="contacto.html">CONTACTO</a>
+                  </li>
+
+               </ul>
             </div>
-        </main>
+         </div>
+      </nav>
+   </header>
 
-    </div>
-
-    <!-- SERVICIOS -->
-
-    <section id="servicios">
-
-        <div class="cajita">
-            <h2>Plan de Pago</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est provident distinctio sapiente magni facere
-                cum, architecto aperiam unde enim rem odit libero fugiat eligendi. Veniam optio alias sed molestiae ad?
-            </p>
-            <i class="fa-solid fa-tooth"></i>
-        </div>
-
-        <div class="cajita">
-            <h2>suma puntos </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est provident distinctio facere
-                cum, unde enim rem odit libero fugiat eligendi. Veniam optio alias sed molestiae ad?
-            </p>
-            <i class="fa-solid fa-house-medical"></i>
-        </div>
-
-        <div class="cajita">
-            <h2>Hoteles de lujo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est provident distinctio sapiente magni facere
-                cum, architecto aperiam unde enim rem odit libero fugiat eligendi. Veniam optio alias sed molestiae ad?
-            </p>
-            <i class="fa-solid fa-briefcase-medical"></i>
-        </div>
-
-        <div class="cajita">
-            <h2>Descubre</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est provident distinctio sapiente magni facere
-                cum, architecto aperiam unde enim rem odit libero fugiat eligendi. Veniam optio alias sed molestiae ad?
-            </p>
-            <i class="fa-solid fa-person-breastfeeding"></i>
-        </div>
-
-    </section>
-
-    <section id="ubicacion">
-        <h2>¿Dónde estamos ubicados?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum debitis dolorem maiores perferendis,
-            atque provident et eum est facilis quas accusantium, modi obcaecati libero quisquam voluptate cumque vero at
-            magni, consequatur quo asperiores vitae! Voluptate perferendis, eligendi velit ipsam autem consectetur eius
-            animi sunt doloremque facere nulla laudantium. Facere rem provident delectus exercitationem natus distinctio
-            magnam minus, totam non. Quasi accusantium recusandae tempore. Dignissimos, est? Labore, porro doloribus!
-            Dignissimos pariatur veniam dolorem consequuntur aperiam labore quasi, sint voluptates est ullam itaque
-            aspernatur odit minus voluptate praesentium quae voluptas sunt. Rem illum placeat error harum doloremque at?
-            Magnam eos eaque voluptatem.</p>
-    </section>
-
-    <!-- CONTACTO -->
-
-    <section id="contacto">
-        <form class="formulario">
-            <h3>Realice su consulta</h3>
-            <i>En breve un asesor se contactará</i>
-            <div class="contenedorInput">
-                <input class="campo" type="text" placeholder="Ingrese su nombre">
-                <input class="campo" type="text" placeholder="Ingrese su apellido">
-                <input class="campo" type="email" placeholder="Ingrese su email">
+   <!--  BANNER  -->
+   <main>
+      <section id="carousel" class="carousel slide" data-bs-ride="carousel">
+         <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+               <img src="img/banner/banner_inicio_3.jpg" class="d-block w-100" alt="">
             </div>
-            <textarea class="campo" name="mensaje" id="mensaje" cols="30" rows="10"
-                placeholder="Ingrese su mensaje"></textarea>
-            <input class="botonAsociar tamBotonForm" type="submit">
-        </form>
-        <div class="oficina">
-            <h2 class="tituloOficinas">Nuestas Oficinas</h2>
-            <img class="nuestrasOficinas" src="./media/agente-de-viajes-2a724a1de5c3b739322a080641f68cf2.jpg" alt="">
-        </div>
-    </section>
 
-    <!-- FOOTER -->
 
-    <footer>
-        <h4>Todos los derechos reservados Hoteljs 2022</h4>
-    </footer>
+            <div class="carousel-item" data-bs-interval="3000">
+               <img src="img/banner/banner_inicio_2.jpg" class="d-block w-100" alt="...">
+            </div>
 
-    <script src="./js/paquetes.js"></script>
-    <script src="./js/carrito.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+            <div class="carousel-item" data-bs-interval="3000">
+               <img src="img/banner/banner_inicio_1.jpg" class="d-block w-100" alt="...">
+            </div>
+
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+         </button>
+      </section>
+
+      <!--  TÍTULO  -->
+      <section class="about-info">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <h1 class="about-title text-center"><span>AG Renta</span>, tu proveedor de renta de autobuses y
+                     camionetas.
+                  </h1>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <!--  ACERCA Y UNIDADES  -->
+      <section class="about_part section-padding">
+         <div class="container">
+            <div class="row">
+               <div class="section_tittle">
+                  <h2>Promociones <span> Black Friday</span></h2>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-lg-6 col-md-6" data-aos="zoom-out-right">
+                  <div class="about_img">
+                     <img src="https://media.staticontent.com/media/pictures/2e0ef62c-6c0b-4cd8-8d0c-15eb9e014d73"
+                        alt="">
+                  </div>
+               </div>
+               <div class="offset-lg-1 col-lg-5 col-sm-8 col-md-6">
+                  <div class="about_text">
+                     <h2>Conoce nuestros <span> servicios y unidades</span> en renta para tus eventos.</h2>
+                     <p>Contamos con unidades de diferentes capacidades, desde un autobús de 44 plazas hasta una
+                        camioneta
+                        para grupos mas pequeños de 23 y 17 pasajeros.</p>
+                     <a class="btn_1" href="https://wa.me/525547214435/?text=Solicito%20%20cotización" target="_blank"
+                        data-aos="zoom-out-left"><img src="img/icon/logo-wasap.png" width="50" height="50"> Cotizar</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--  SERVICIOS Y AMENIDADES  -->
+      <section class="service_part">
+         <div class="container">
+            <div class="row justify-content-between align-items-center">
+               <div class="col-lg-12 col-xl-12">
+                  <div class="section_tittle">
+                     <h2><span>Nuestros</span> Servicios</h2>
+                  </div>
+                  <div class="service_part_iner">
+                     <div class="row">
+                        <div class="col-lg-12 col-sm-12">
+                           <div class="single_service_text" data-aos="fade-down">
+                              <img src="img/icon/visitar.png" alt="Lugares">
+                              <h4>Lugares A Visitar</h4>
+                              <p>Nuestros paquetes ofrecen diferentes destinos, unicos por nuestra calidad.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                           <div class="single_service_text" data-aos="fade-right">
+                              <img src="img/icon/clima.png" alt="asientos reclinables">
+                              <h4>Pasajes resguardados por clima</h4>
+                              <p>Nuestros pasajes poseen un seguro total por clima.</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                           <div class="single_service_text" data-aos="fade-left">
+                              <img src="img/icon/alojamiento.png" alt="cinturon de seguridad">
+                              <h4>Alojamiento</h4>
+                              <p>Para tu tranquilidad, Contamos con la mas amplia red de hoteles en todo el mundo</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                           <div class="single_service_text" data-aos="fade-right">
+                              <img src="img/icon/itinerario.png" alt="pantalla plana">
+                              <h4>Itinerario</h4>
+                              <p>Disfruta de tu viaje con viajes guiados con expertos. </p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                           <div class="single_service_text" data-aos="fade-left">
+                              <img src="img/icon/playas.png" alt="seguro de accidente">
+                              <h4>Playas</h4>
+                              <p>Todos nuestros paquetes ofrecen conocer las playas mas hermosas del mundo.</p>
+                           </div>
+                        </div>
+
+                        <div class="col-lg-6 col-sm-6">
+                           <div class="single_service_text" data-aos="fade-right">
+                              <img src="img/icon/mapa.png" alt="sensor de velocidad">
+                              <h4>Mapa</h4>
+                              <p>Selecciona donde ir y disfruta, el limite lo pones tú!</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                           <div class="single_service_text" data-aos="fade-left">
+                              <img src="img/icon/alojamiento.png" alt="volante">
+                              <h4>Operadores capacitados</h4>
+                              <p>Nuestros compañeros operadores son constantemente capacitados y evaluados.</p>
+                           </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12">
+                           <div class="single_service_text" data-aos="fade-up">
+                              <img src="img/icon/parques.png" alt="mantenimiento a unidades">
+                              <h4>Parques</h4>
+                              <p>Travesias unicas en los mas grandes parques del mundo.</p>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!--ENLACES A BLOG-->
+      <section>
+         <div class="blog_part">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 col-lg-12 col-xl-12">
+                     <div class="blog_part_tittle">
+                        <h2>Visita nuestro<span> blog</span> </h2>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="container-fluid">
+               <div class="container pt-5">
+                  <div class="row row-cols-1 row-cols-md-4 g-6">
+
+                     <div class="col" data-aos="zoom-in-left">
+                        <div class="card h-100 shadow">
+                           <img src="img/blog/category3.png" class="card-img-top" alt="...">
+                           <div class="card-body">
+                              <h5 class="card-title">¡Playas Griegas!</h5>
+                              <p class="card-text">Llegar a las islas griegas es respirar otro aire, unos mares que rodean a un país que es historia, inicio, civilización y cultura que traspasa. Entre el Mar Egeo y el Mar Jónico se suceden una cantidad inexacta...</p>
+                              <a href="https://www.conalmadeviaje.com/blog/islas-griegas-grecia"
+                                 class="btn btn-success  btn_1" target="_blank">Leer más...</a>
+                           </div>
+                           <div class="card-footer">
+                              <small class="text-muted"></small>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col">
+                        <div class="card h-100 shadow" data-aos="zoom-out">
+                           <img src="img/blog/category1.jpg" class="card-img-top" alt="...">
+                           <div class="card-body">
+                              <h5 class="card-title">Cancun</h5>
+                              <p class="card-text">Con un ambiente familiar y rodeado de naturaleza, en Cancun podrás
+                                 pasar momentos llenos de diversión y adrenalina... </p>
+                              <a href="https://www.cancun-adventure.com/es/blog"
+                                 class="btn btn-success btn_1" target="_blank">Leer más...</a>
+                           </div>
+                           <div class="card-footer">
+                              <small class="text-muted"></small>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col">
+                        <div class="card h-100 shadow" data-aos="zoom-out">
+                           <img src="img/blog/category2.jpg" class="card-img-top" alt="...">
+                           <div class="card-body">
+                              <h5 class="card-title">Egipto</h5>
+                              <p class="card-text">Un viaje a Egipto te lleva a lo largo del Nilo desde el Alto Egipto
+                                 de Aswan o Abu Simbel hasta las grandes pirámides de Guiza, pasando por los templos de
+                                 Luxor...</p>
+                              <a href="https://viajes.chavetas.es/guia/egipto/" class="btn btn-success btn_1"
+                                 target="_blank">Leer más...</a>
+                           </div>
+                           <div class="card-footer">
+                              <small class="text-muted"></small>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col">
+                        <div class="card h-100 shadow" data-aos="zoom-in-right">
+                           <img src="img/blog/category4.jpg" class="card-img-top" alt="...">
+                           <div class="card-body">
+                              <h5 class="card-title">Coliseo Romano</h5>
+                              <p class="card-text">Si todavía no has visto el Coliseo Romano no te pierdas esta
+                                 oportunidad para conocer uno de los monumentos más famosos y visitados del mundo. El
+                                 Coliseo es sin duda el símbolo de una ciudad: Roma...</p>
+                              <a href="https://recorriendoroma.com/el-coliseo-romano/" class="btn btn-success btn_1"
+                                 target="_blank">Leer más...</a>
+                           </div>
+                           <div class="card-footer">
+                              <small class="text-muted"></small>
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+      </section>
+   </main>
+
+   <footer class="footer_part">
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-6 col-lg-3">
+               <div class="single_footer_part text-center">
+                  <h4>Sígue nuestras redes sociales</h4>
+                  <p>Dale click a la red social de tu preferencia.</p>
+                  <div class="footer_icon social_icon">
+                     <ul class="list-unstyled text-center">
+                        <li><a href="https://www.facebook.com/hoteljs" target="_blank" class="bi bi-facebook"></a></li>
+                        <li><a href="https://twitter.com/hoteljs" target="_blank" class="bi bi-twitter"></a></li>
+                        <li><a href="https://www.instagram.com/hoteljs" target="_blank" class="bi bi-instagram"></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+               <div class="single_footer_part text-center">
+                  <h4>Nuestros datos:</h4>
+                  <p>Dirección : florida 555.</p>
+                  <p><a href="tel:+54113721443">Teléfono : Click para llamar</a></p>
+                  <p><a href="mailto:agencia@gmail.com?subject=Questions&body=Solicito información por favor. ">Correo:
+                        Enviar mensaje.</a></p>
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+               <div class="single_footer_part text-center">
+                  <h4>Mapa del sitio</h4>
+                  <ul class="list-unstyled">
+                     <li class="nav-item animate__animated animate__pulse">
+                        <a class="nav-link active text-light" aria-current="page" href="index.html">Inicio</a>
+                     </li>
+                     <li class="nav-item ">
+                        <a class="nav-link" aria-current="page" href="empresa.html">Empresa</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="unidades.html">Unidades</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="clientes.html">Clientes</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="contacto.html">Contacto</a>
+                     </li>
+                  </ul>
+
+               </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+               <div class="single_footer_part text-center">
+                  <h4>Nuestro boletín</h4>
+                  <p>Suscríbete a nuestro newsletter para no perderte ninguna oferta en tu proximo viaje!</p>
+                  <div id="mc_embed_signup">
+                     <form target="_blank" method="get" class="subscribe_form relative mail_part" required>
+
+                        <input type="email" name="email" id="newsletter-form-email" placeholder="Correo electrónico"
+                           class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = ' Email Address '" required="" type="email">
+                        <button type="submit" name="submit" id="newsletter-submit"
+                           class="email_icon newsletter-submit button-contactForm"><i
+                              class="far fa-paper-plane"></i></button>
+                        <div class="mt-10 info"></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <hr>
+         <div class="row">
+            <div class="col-lg-12">
+               <div class="copyright_text text-center">
+                  <p>
+                     Copyright &copy;
+                     <script>
+                        document.write(new Date().getFullYear());
+                     </script> Agencia hoteljs
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- Optional JavaScript; choose one of the two! -->
+
+   <!-- Option 1: Bootstrap Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+      </script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init({
+         duration: 1000,
+         once: true
+      });
+   </script>
 </body>
 
 </html>
