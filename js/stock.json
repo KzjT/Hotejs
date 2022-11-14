@@ -12,4 +12,5 @@
     {"id": 10, "nombre": "Cadena Dorado", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 310000,  "img": "./img/paquetes/paquete10.jpg"},
     {"id": 11, "nombre": "San Andres", "cantidad": 1, "desc": "*No incluye hospedaje.", "precio": 150000, "img": "./img/paquetes/paquete11.jpg"},
     {"id": 12, "nombre": "Punta Cana", "cantidad": 1, "desc": "*incluye hospedaje 2 personas.", "precio": 239000, "img": "./img/paquetes/paquete12.jpg"}
+    
 ]

@@ -4,14 +4,14 @@ const botonCerrar = document.getElementById('carritoCerrar')
 const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
 
 
-botonAbrir.addEventListener('click', ()=>{
+botonAbrir.addEventListener('click', () => {
     contenedorModal.classList.toggle('modal-active')
 })
-botonCerrar.addEventListener('click', ()=>{
+botonCerrar.addEventListener('click', () => {
     contenedorModal.classList.toggle('modal-active')
 })
 
-contenedorModal.addEventListener('click', (event) =>{
+contenedorModal.addEventListener('click', (event) => {
     contenedorModal.classList.toggle('modal-active')
 
 })

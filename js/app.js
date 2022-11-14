@@ -12,52 +12,55 @@ let carrito = []
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')){
+    if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
     }
 })
 
-botonVaciar.addEventListener('click', () => {                                
-    
-    if (carrito.length >= 1 ) { Swal.fire({
-        title: '¿Vas a eliminar todos los paquetes?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#FF0000',  /*  ROJO    */
-        cancelButtonColor: '#008000',   /*  VERDE   */
-        confirmButtonText: 'Yes'
-      }).then((result) => {
+botonVaciar.addEventListener('click', () => {
 
-        if (result.isConfirmed) {
-          Swal.fire(
-            '¡Eliminados!',
-            'Carrito vacío.',
-            'success'
-          )
-          carrito.length = 0
-          actualizarCarrito()
-        }
-      })} else{
-        Swal.fire({                                             
+    if (carrito.length >= 1) {
+        Swal.fire({
+            title: '¿Vas a eliminar todos los paquetes?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#FF0000',  /*  ROJO    */
+            cancelButtonColor: '#008000',   /*  VERDE   */
+            confirmButtonText: 'Yes'
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+                Swal.fire(
+                    '¡Eliminados!',
+                    'Carrito vacío.',
+                    'success'
+                )
+                carrito.length = 0
+                actualizarCarrito()
+            }
+        })
+    } else {
+        Swal.fire({
             icon: 'error',
             title: 'Carrito vacío',
-                        
-          }) }
-  
+
+        })
+    }
+
 })
 
 
 const cargapaquetes = async () => {
     const resp = await
-    fetch ("/js/stock.json")
-     datapaquetes = await resp.json()
+        fetch("/js/stock.json")
+    datapaquetes = await resp.json()
 
-   
+
     datapaquetes.forEach((paquete) => {
-    const div = document.createElement('div')
-    div.classList.add('paquete')
-    div.innerHTML = `
+        const div = document.createElement('div')
+        div.classList.add('paquete')
+        div.innerHTML = `
     <img class="cardimg"  src=${paquete.img} alt= "">
     
     <p>${paquete.desc}</p>
@@ -66,52 +69,52 @@ const cargapaquetes = async () => {
     <button id="agregar${paquete.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
 
     `
-    contenedorPaquetes.appendChild(div)
+        contenedorPaquetes.appendChild(div)
 
-    
-    const boton = document.getElementById(`agregar${paquete.id}`)
-    
 
-    boton.addEventListener('click', () => {
-        
-        agregarAlCarrito(paquete.id)
-       
+        const boton = document.getElementById(`agregar${paquete.id}`)
+
+
+        boton.addEventListener('click', () => {
+
+            agregarAlCarrito(paquete.id)
+
+        })
     })
-})
 
 }
 
-cargapaquetes ()
+cargapaquetes()
 
 
 
 const agregarAlCarrito = (pqtId) => {
-                                               
+
     Toastify({
 
         text: "Paquete añadido",
-        
+
         duration: 4000,
-        gravity : "bottom",
-        postion :"right"
-        
-        }).showToast();
+        gravity: "bottom",
+        postion: "right"
 
-  
-    const existe = carrito.some (pqt => pqt.id === pqtId) //comprobar si el elemento ya existe en el carro
+    }).showToast();
 
-    if (existe){ 
-        const pqt = carrito.map (pqt => { 
-            if (pqt.id === pqtId){
+
+    const existe = carrito.some(pqt => pqt.id === pqtId) //comprobar si el elemento ya existe en el carro
+
+    if (existe) {
+        const pqt = carrito.map(pqt => {
+            if (pqt.id === pqtId) {
                 pqt.cantidad++
             }
-           
+
         })
-    } else { 
+    } else {
         const item = datapaquetes.find((pqt) => pqt.id === pqtId)
         carrito.push(item)
     }
-   actualizarCarrito() 
+    actualizarCarrito()
 }
 
 
@@ -119,21 +122,21 @@ const agregarAlCarrito = (pqtId) => {
 
 const eliminarDelCarrito = (pqtId) => {
     const item = carrito.find((pqt) => pqt.id === pqtId)
-    const indice = carrito.indexOf(item) 
-    carrito.splice(indice, 1) 
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1)
 
-    Swal.fire({                                             
+    Swal.fire({
         icon: 'error',
-        title: 'Paquete eliminado',                
-      })
+        title: 'Paquete eliminado',
+    })
 
-    actualizarCarrito()    
+    actualizarCarrito()
 }
 
 
 const actualizarCarrito = () => {
-   
-    contenedorCarrito.innerHTML = "" 
+
+    contenedorCarrito.innerHTML = ""
     carrito.forEach((pqt) => {
         const div = document.createElement('div')
         div.className = ('paqueteEnCarrito')
@@ -147,37 +150,37 @@ const actualizarCarrito = () => {
         `
         contenedorCarrito.appendChild(div)
 
-    })  
-    contadorCarrito.innerText = carrito.length    
+    })
+    contadorCarrito.innerText = carrito.length
     precioTotal.innerText = carrito.reduce((acc, pqt) => acc + pqt.cantidad * pqt.precio, 0)
-    guardarCarritoStorage(carrito);       
+    guardarCarritoStorage(carrito);
 }
 
- botonComprar.addEventListener('click', () => {
-        if (carrito.length >= 1) {
-            Swal.fire({                                 
-                
-                title: 'Agradece tu compra y te desea feliz viaje',
-/*                text: '¡Feliz Viaje!',*/
-                imageUrl: '/img/paquetes/logo.png',
-                imageWidth: 200,
-                imageHeight: 100,
-                imageAlt: 'Custom image',
-                icon:'success',
-              })
-            carrito.length = 0
-            actualizarCarrito()
-         }else {
+botonComprar.addEventListener('click', () => {
+    if (carrito.length >= 1) {
+        Swal.fire({
 
-            Swal.fire({                                             
-                icon: 'error',
-                title: 'Carrito vacío',                
-                
-                
-              })
-         }   
-         
- })
+            title: 'Agradece tu compra y te desea feliz viaje',
+            /*                text: '¡Feliz Viaje!',*/
+            imageUrl: '/img/paquetes/logo.png',
+            imageWidth: 200,
+            imageHeight: 100,
+            imageAlt: 'Custom image',
+            icon: 'success',
+        })
+        carrito.length = 0
+        actualizarCarrito()
+    } else {
+
+        Swal.fire({
+            icon: 'error',
+            title: 'Carrito vacío',
+
+
+        })
+    }
+
+})
 
 
 //Storage carrito.
@@ -186,7 +189,7 @@ const guardarCarritoStorage = (carrito) => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')){
+    if (localStorage.getItem('carrito')) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         actualizarCarrito()
     }
