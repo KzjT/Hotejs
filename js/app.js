@@ -101,7 +101,7 @@ const agregarAlCarrito = (pqtId) => {
     }).showToast();
 
 
-    const existe = carrito.some(pqt => pqt.id === pqtId) //comprobar si el elemento ya existe en el carro
+    const existe = carrito.some(pqt => pqt.id === pqtId) //verificar si el elemento ya existe en el carrito
 
     if (existe) {
         const pqt = carrito.map(pqt => {
